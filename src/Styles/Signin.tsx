@@ -40,6 +40,7 @@ margin-left: ${wp("7%")};
 `
 export const Formholder = styled.View`
     margin-top: ${hp("1%")}; 
+    margin-bottom: ${hp("2.5%")};
 `
 export const Labelss = styled.Text`
     

@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react";
 
-import { View,TouchableOpacity, ScrollView ,Image} from "react-native";   
+import { View,TouchableOpacity, ScrollView ,Image,Text} from "react-native";   
 import { NativeBaseProvider,Input } from "native-base";
 import { Maincontainer } from "../Styles/Signin";
 import Button from "../components/Button";
@@ -15,6 +15,7 @@ type Authtype = StackNavigationProp<AuthStackParamList, "Bottomtab">
 import { useNavigation } from "@react-navigation/native";
 import { StackNavigationProp } from '@react-navigation/stack';
 import { Mainholder } from "../Styles/Bnbcard";
+import { COLORS } from "../constants";
 
 
                              
@@ -22,8 +23,12 @@ const BuyCrypto : FC = () => {
     const navigation = useNavigation<Authtype>();
 
     return (           
-        <NativeBaseProvider>                        
-            <Maincontainer>                                                                     
+        <NativeBaseProvider>          
+
+            <View style = {{flex:1,backgroundColor:COLORS.apptheme,justifyContent:"center",alignItems:"center"}}>
+                <Text style = {{color:"white"}}> COMING SOON </Text>
+                </View>              
+            {/* <Maincontainer>                                                                     
             <Mainholder>                                                                                               
                     <TouchableOpacity onPress={() => navigation.goBack()}>                                    
                     <AntDesign name="arrowleft" size={23} color={'#fff'} style={{}}/>
@@ -52,7 +57,7 @@ const BuyCrypto : FC = () => {
                 <Buttonholder>                  
                     <Button title="Preview Buy" onPress={() => { navigation.navigate("Summary") }} /></Buttonholder>
                 </ScrollView>
-                </Maincontainer>                
+                </Maincontainer>                 */}
                 </NativeBaseProvider>
     )
 }

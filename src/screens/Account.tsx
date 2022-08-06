@@ -27,9 +27,8 @@ const Profiledata = [
 const Account: FC = () => {
 
 
-    return (
+    return (  
         <NativeBaseProvider>
-<ScrollView>
             <Header>
                 <Image source={require("../assets/images/Crowd.png")} style={styles.imagestyle} />
             </Header>
@@ -43,8 +42,9 @@ const Account: FC = () => {
                             <View>
                                 <Image source={data.image} style={styles.accimg} />
                                 <Profilename>{data.username}</Profilename>
+<ScrollView style = {{height:heightPercentageToDP("55%")}}>
+                                <Formholder> 
 
-                                <Formholder>
                                     <Labels>Name</Labels>
                                     <Eachfield>
                                         <Textinputholder>
@@ -77,20 +77,18 @@ const Account: FC = () => {
                                         </Textinputholder></Eachfield>
 
 
-
+                                        <View style={{ alignSelf: "center", marginTop: heightPercentageToDP("2%"),marginBottom:heightPercentageToDP("2.5%") }}>
+                                    <Button title="Logout" /></View>
 
                                 </Formholder>
-                                <View style={{ alignSelf: "center", marginTop: heightPercentageToDP("5%") }}>
-                                    <Button title="Logout" /></View>
+                                </ScrollView>
                             </View>
 
 
                         )
                     })
                 } 
-            </Footer>
-            </ScrollView>
-        </NativeBaseProvider>
+            </Footer></NativeBaseProvider>
     );
 };
 
